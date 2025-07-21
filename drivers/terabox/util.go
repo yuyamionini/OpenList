@@ -235,7 +235,6 @@ func (d *Terabox) linkCrack(file model.Obj, args model.LinkArgs) (*model.Link, e
 	param := map[string]string{
 		"target": fmt.Sprintf("[\"%s\"]", file.GetPath()),
 		"dlink":  "1",
-		"origin": "dlna",
 	}
 	_, err := d.get("/api/filemetas", param, &resp)
 	if err != nil {
